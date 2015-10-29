@@ -2,6 +2,8 @@
 Mine solution for leetcode
 
 List of solutions
+
+
 | Left-Aligned  | Center Aligned  | Right Aligned |
 | :------------ |:---------------:| -----:|
 | col 3 is      | some wordy text | $1600 |
