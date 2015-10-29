@@ -1,7 +1,7 @@
 # leetcode
 *Personal website: http://eceweb1.rutgers.edu/~bl352/*
 
-Mine solution for leetcode
+Mine solutions for some leetcode problems **updating...**.
 
 List of solutions
 
