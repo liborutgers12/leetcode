@@ -1,0 +1,34 @@
+public class Solution {
+    public int lengthOfLongestSubstring(String s) {
+        int max_len = 0;
+        int idx_s = 0, idx_e = 0;
+        if(s.length()==1)
+            return 1;
+        for(int i=idx_e+1; i<s.length(); i++){
+            int idx_same = -1;
+            for(int j = idx_s;j<i;j++){
+                if(s.charAt(i)==s.charAt(j)){
+                    idx_same = j;
+                    break;
+                }
+            }
+            
+            if (idx_same==-1){
+                // the i-th char is not in the current substring
+                idx_e = i; 
+                if(max_len<idx_e - idx_s + 1)
+                    max_len = idx_e - idx_s + 1;
+            } else {
+                // store the current length if it is larger than max_len
+                if(max_len<idx_e - idx_s + 1)
+                    max_len = idx_e - idx_s + 1;
+                // update the new start and end indecies of the substring
+                idx_s = idx_same + 1;
+                idx_e = i;
+            }
+            
+        }
+        
+        return max_len;
+    }
+}
