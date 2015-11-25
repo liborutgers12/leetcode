@@ -4,7 +4,7 @@
 Mine solutions for some leetcode problems **updating...**.
 
 ##List of solutions
-### Notation: * indicates that the solution is not optimized
+Notation: * indicates that the solution is not optimized
 
 | Problem No.   | Problem Name    | Mine Solution |
 | :------------ |:---------------:| -----:|
