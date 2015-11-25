@@ -1,0 +1,33 @@
+// not finished yet
+public class Solution {
+    public boolean isMatch(String s, String p) {
+        
+        // solution based on DP: the DP State[i,j] = true if substring s[0..i] and p[0...j] is a match
+        int sLen = s.length(), pLen = p.length();
+        boolean[][] table = new boolean [sLen][pLen];
+        
+        // The DP table 
+        for (int slen = 0; slen <= sLen; slen++) {
+            for (int plen = 0; plen <= pLen; plen++) {
+                
+                // set the first column and row
+                if (slen == 0 || plen == 0){
+                    table[slen][plen] = false;
+                } else {
+                    if (table[slen-1][plen-1] == true){
+                        if (s.charAt(slen)==p.charAt(plen) || p.charAt(plen) == '.' || 
+                                (p.charAt(plen)=='*'&&s.charAt(slen)==p.charAt(plen-1))) {
+                            table[slen][plen] = true;
+                        }
+                    } else if (table[slen][plen-1] == true) {
+                        if ()
+                    }
+                        
+                }
+                
+            }
+        }
+        
+        return table[sLen][pLen];
+    }
+}
